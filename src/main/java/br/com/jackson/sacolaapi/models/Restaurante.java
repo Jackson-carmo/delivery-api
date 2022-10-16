@@ -1,6 +1,7 @@
 package br.com.jackson.sacolaapi.models;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,6 +10,7 @@ import java.util.List;
 
 @Data
 @Entity
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Restaurante {
@@ -18,7 +20,7 @@ public class Restaurante {
     private Long id;
     private String nome;
     @OneToMany(cascade = CascadeType.ALL)
-    private List<Produto> produtos;
+    private List<Produto> cardapio;
     @Enumerated
     private Endereco endereco;
 }

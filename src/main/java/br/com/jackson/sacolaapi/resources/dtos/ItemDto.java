@@ -1,4 +1,4 @@
-package br.com.jackson.sacolaapi.models;
+package br.com.jackson.sacolaapi.resources.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,14 +6,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Embeddable;
-import javax.persistence.Entity;
 
 @Data
 @Builder
 @Embeddable
 @NoArgsConstructor
 @AllArgsConstructor
-public class Endereco {
-    private String cep;
-    private String complemento;
+public class ItemDto {
+
+    private Long produtoId;
+    private int quantidade;
+    private Long sacolaId;
 }

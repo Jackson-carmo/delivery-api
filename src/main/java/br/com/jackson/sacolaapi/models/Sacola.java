@@ -13,6 +13,7 @@ import java.util.List;
 
 @Data
 @Entity
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Sacola {
@@ -25,7 +26,7 @@ public class Sacola {
     private Cliente cliente;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Item> itens;
-    private Double vaolorTotal;
+    private Double valorTotal;
 
     @Enumerated
     private FormaPagamento FormaPagamento;
